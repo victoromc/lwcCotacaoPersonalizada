@@ -1,0 +1,635 @@
+<template>
+    <div class="divPrincipal">
+        <lightning-record-view-form record-id={recordId} object-api-name={objectApiName}>
+            <!-- Infos Gerais -->
+            <div class="slds-section slds-is-open">
+
+                <h3 class="slds-section__title">
+                    <button aria-controls="expando-unique-id" aria-expanded="true"
+                        class="slds-button slds-section__title-action">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+                            aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>
+                        <span class="slds-truncate" title="Section Title">Informações Gerais</span>
+                    </button>
+                </h3>
+                <div aria-hidden="false" class="divInterna slds-section__content" id="infogerais">
+
+                    <div class="margemTopNeg slds-grid slds-gutters">
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Data__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Shopping__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Luc__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Area__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Executivo__c">
+                            </lightning-output-field>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Status">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Loja_Vaga__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Qtd_meses__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="EC_original_loja_real__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="EC_original_loja_realm__c">
+                            </lightning-output-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim Infos Gerais-->
+
+            <!-- Comparativo -->
+            <div class="slds-section slds-is-open">
+                <h3 class="slds-section__title">
+                    <button aria-controls="expando-unique-id" aria-expanded="true"
+                        class="slds-button slds-section__title-action">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+                            aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>
+                        <span class="slds-truncate" title="Section Title">Comparativo</span>
+                    </button>
+                </h3>
+                <div aria-hidden="false" class="divInterna slds-section__content" id="comparativo">
+                    <div class="margemTopNeg slds-grid slds-gutters">
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Loja_proposta_la__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Atividade_lp__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Tipo_de_Contrato_LP__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Prazo_de_Contrato_LP__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Aluguel_medio_rsm_lp__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Condominio_rsm_lp__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="FPP_rsm_lp__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="A_percent_lp__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CTO_lp__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Boleto_total_rsm_lp__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Boleto_total_lp__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Venda_lp__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Ponto_de_equilibrio_lp__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CTO_venda_lp__c">
+                            </lightning-output-field>
+
+                        </div>
+
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Loja_anterior_la__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Atividade_la__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Tipo_contrato_la__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Prazo_contrato_la__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Aluguel_medio_rsm_la__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Condominio_rsm_la__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="FPP_rsm_la__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="A_percent_la__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CTO_la__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Boleto_total_rsm_la__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Boleto_total_la__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Venda_la__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Ponto_de_equilibrio_la__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CTO_venda_la__c">
+                            </lightning-output-field>
+                        </div>
+
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Tabela__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Atividade_tb__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Tipo_contrato_tb__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Prazo_contrato_tb__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Aluguel_medio_rsm_tb__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Condominio_rsm_la__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="FPP_rsm_tb__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="A_percent_tb__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CTO_tb__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Boleto_total_rsm_tb__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Boleto_total_tb__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Venda_tb__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Ponto_de_equilibrio_tb__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CTO_venda_tb__c">
+                            </lightning-output-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim Comparativo-->
+
+            <!-- Condições Comerciais -->
+            <div class="slds-section slds-is-open">
+
+                <h3 class="slds-section__title">
+                    <button aria-controls="expando-unique-id" aria-expanded="true"
+                        class="slds-button slds-section__title-action">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+                            aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>
+                        <span class="slds-truncate" title="Section Title">Condições Comerciais</span>
+                    </button>
+                </h3>
+                <div aria-hidden="false" class="divInterna slds-section__content" id="condcomerciais">
+                    <div class="margemTopNeg slds-grid slds-gutters">
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Amm_cmm_ano1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Amm_cmm_ano2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Amm_cmm_ano3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Amm_cmm_ano4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Amm_cmm_ano5__c">
+                            </lightning-output-field>
+
+                        </div>
+
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Quantidade_porc_ano_1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Quantidade_porc_ano_2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Quantidade_porc_ano_3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Quantidade_porc_ano_4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Quantidade_porc_ano_5__c">
+                            </lightning-output-field>
+
+                        </div>
+
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="BoletoOuCmm1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="BoletoOuCmm2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="BoletoOuCmm3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="BoletoOuCmm4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="BoletoOuCmm5__c">
+                            </lightning-output-field>
+                        </div>
+
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Valor_por_metro_ano_1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Valor_por_metro_ano_2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Valor_por_metro_ano_3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Valor_por_metro_ano_4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Valor_por_metro_ano_5__c">
+                            </lightning-output-field>
+                        </div>
+
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Amm1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Amm2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Amm3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Amm4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Amm5__c">
+                            </lightning-output-field>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Valor_por_metro_6__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Valor_por_metro_7__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Valor_por_metro_8__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Valor_por_metro_9__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Valor_por_metro_10__c">
+                            </lightning-output-field>
+                        </div>
+
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Meses1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Meses2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Meses3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Meses4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Meses5__c">
+                            </lightning-output-field>
+                        </div>
+
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Condominio1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Condominio2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Condominio3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Condominio4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Condominio5__c">
+                            </lightning-output-field>
+                        </div>
+
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="FPP1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="FPP2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="FPP3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="FPP4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="FPP5__c">
+                            </lightning-output-field>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CO_percent1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CO_percent2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CO_percent3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CO_percent4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CO_percent5__c">
+                            </lightning-output-field>
+                        </div>
+
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="AMM_Ano_1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="AMM_Ano_2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="AMM_Ano_3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="AMM_Ano_4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="AMM_Ano_5__c">
+                            </lightning-output-field>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- Fim Condições Comerciais -->
+
+            <!--Demais Condições-->
+            <div class="slds-section slds-is-open">
+
+                <h3 class="slds-section__title">
+                    <button aria-controls="expando-unique-id" aria-expanded="true"
+                        class="slds-button slds-section__title-action">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+                            aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>
+                        <span class="slds-truncate" title="Section Title">Demais Condições</span>
+                    </button>
+                </h3>
+                <div aria-hidden="false" class="divInterna slds-section__content" id="demaiscondicoes">
+                    <div class="margemTopNeg slds-grid slds-gutters">
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Carencia_AMM_dc__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Carencia_condominio_dc__c">
+                            </lightning-output-field>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Fundo_de_promocao_dc__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Vgl_rs__c">
+                            </lightning-output-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Taxa de comercialização e Condições especiais-->
+
+            <!--Observações Especiais-->
+            <div class="slds-section slds-is-open">
+
+                <h3 class="slds-section__title">
+                    <button aria-controls="expando-unique-id" aria-expanded="true"
+                        class="slds-button slds-section__title-action">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+                            aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>
+                        <span class="slds-truncate" title="Section Title">Taxa de Comercialização / Condições
+                            especiais</span>
+                    </button>
+                </h3>
+                <div aria-hidden="false" class="divInterna slds-section__content" id="txcomercializacao">
+                    <div class="margemTopNeg slds-grid slds-gutters">
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CDU_ou_taxa__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Valor_tx__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Valor_metro_tx__c">
+                            </lightning-output-field>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Entrada_tx__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Percent_tx__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="Numero_parcela_tx__c">
+                            </lightning-output-field>
+                        </div>
+                    </div>
+                    <hr style="color: lightgray;">
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="AllowanceOuMutuo__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Valor_am__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Pagamento_am__c">
+                            </lightning-output-field>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Fim Taxa de comercialização e Condições especiais-->
+
+
+
+            <!-- Histórico -->
+            <div class="slds-section slds-is-open">
+
+                <h3 class="slds-section__title">
+                    <button aria-controls="expando-unique-id" aria-expanded="true"
+                        class="slds-button slds-section__title-action">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+                            aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>
+                        <span class="slds-truncate" title="Section Title">Histórico</span>
+                    </button>
+                </h3>
+                <div aria-hidden="false" class="divInterna slds-section__content" id="historico">
+                    <div class="margemTopNeg">
+                        <lightning-output-field class="slds-form-element_readonly" field-name="Descricao_do_lojista__c">
+                        </lightning-output-field>
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col">
+                                <lightning-output-field class="slds-form-element_readonly" field-name="Localizacao__c">
+                                </lightning-output-field>
+                            </div>
+                            <div class="slds-col">
+                                <lightning-output-field class="slds-form-element_readonly"
+                                    field-name="Numero_de_operacoes__c">
+                                </lightning-output-field>
+                            </div>
+                            <div class="slds-col">
+
+                                <lightning-output-field class="slds-form-element_readonly"
+                                    field-name="Faturamento_medio__c">
+                                </lightning-output-field>
+                            </div>
+
+                        </div>
+                        <lightning-output-field class="slds-form-element_readonly" field-name="Observacoes__c">
+                        </lightning-output-field>
+                    </div>
+                </div>
+            </div>
+            <!--Fim Histórico-->
+            <!--Valores Médio do Segmento-->
+            <div class="slds-section slds-is-open">
+
+                <h3 class="slds-section__title">
+                    <button aria-controls="expando-unique-id" aria-expanded="true"
+                        class="slds-button slds-section__title-action">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+                            aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>
+                        <span class="slds-truncate" title="Section Title">Valores Médios do Segmento</span>
+                    </button>
+                </h3>
+                <div aria-hidden="false" class="divInterna slds-section__content" id="vmsegmento">
+                    <div class="margemTopNeg slds-grid slds-gutters">
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Marca_LP__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Area_LP__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="AluguelMedioRsm_LP__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Condominio_rsm_lp__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="FppRsm_LP__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="APercent_LP__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CtoPercent_LP__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Boleto_LP__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="VendaMediaRsm_LP__c">
+                            </lightning-output-field>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Marca_S1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Area_S1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="AluguelMediaRsm_S1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CondominioRsm_S1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="FppRsm_S1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="APercent_S1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CtoPercent_S1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Boleto_S1__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="VendaMediaRsm_S1__c">
+                            </lightning-output-field>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Marca_S2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Area_S2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="AluguelMediaRsm_S2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CondominioRsm_S2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="FppRsm_S2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="APercent_S2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CtoPercent_S2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Boleto_S2__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="VendaMediaRsm_S2__c">
+                            </lightning-output-field>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Marca_S3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Area_S3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="AluguelMediaRsm_S3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CondominioRsm_S3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="FppRsm_S3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="APercent_S3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CtoPercent_S3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Boleto_S3__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="VendaMediaRsm_S3__c">
+                            </lightning-output-field>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Marca_S4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Area_S4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="AluguelMediaRsm_S4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CondominioRsm_S4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="FppRsm_S4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="APercent_S4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CtoPercent_S4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Boleto_S4__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="VendaMediaRsm_S4__c">
+                            </lightning-output-field>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Marca_M__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Area_M__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly"
+                                field-name="AluguelMediaRsm_M__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CondominioRsm_M__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="FppRsm_M__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="APercent_M__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="CtoPercent_M__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="Boleto_M__c">
+                            </lightning-output-field>
+                            <lightning-output-field class="slds-form-element_readonly" field-name="VendaMediaRsm_M__c">
+                            </lightning-output-field>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Fim Valores Médio do Segmento-->
+
+        </lightning-record-view-form>
+    </div>
+
+</template>

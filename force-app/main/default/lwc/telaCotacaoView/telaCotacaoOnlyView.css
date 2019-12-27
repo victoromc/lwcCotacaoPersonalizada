@@ -1,0 +1,33 @@
+.divPrincipal {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.subtitle2 {
+    font-size: larger;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.subtitle {
+    font-size: larger;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    margin-top: 40px;
+    display: inline-block;
+}
+
+.positionButton{
+    margin-top: 25px;
+    margin-left: 40%;
+}
+.divInterna{
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+}
+.margemTopNeg{
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
